@@ -1,2 +1,83 @@
-Hello Semere
-this is git hub
+<html>
+
+<head>
+    <script>
+        function addperson() {
+            var node = document.createElement("LI");
+            var sName = document.getElementById("myNewName").value;                // Create a <li> node
+            var textnode = document.createTextNode(sName);           // Create a text node
+            node.appendChild(textnode);                              // Append the text to <li>
+            document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
+        }
+        function myFilterFunction() {
+            var sSearchWord = document.getElementById("myFilterBox").value;
+            console.log(sSearchWord);
+        }
+
+        function myFilterFunction() {
+            var input, filter, ul, li, i, txtValue;
+            input = document.getElementById("myFilterBox");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myList");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].innerHTML;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+    body {
+        background-color: rgb(240, 254, 255);
+    }
+
+* {
+  box-sizing: border-box;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the list items */
+ul li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #e2df0d;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+}
+
+    </style>
+    <h3><b>Address Book</b></h3>
+    <input id="myFilterBox" type="text" onkeyup="myFilterFunction();" placeholder="Filter... ">
+    <input id="myNewName" type="text" placeholder="New... ">
+    <button onclick="addperson();">Add</button>
+
+    <ul id="myList">
+        <li>semere</li>
+        <li>semhar</li>
+        <li>sami</li>
+    </ul>
+    <ul id="myNationalitiet">
+            <li>semere</li>
+            <li>semhar</li>
+            <li>sami</li>
+        </ul>
+</body>
+
+</html>

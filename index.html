@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <script>
+        function addperson() {
+            var node = document.createElement("LI");
+            var sName = document.getElementById("myNewName").value;                // Create a <li> node
+            var textnode = document.createTextNode(sName);           // Create a text node
+            node.appendChild(textnode);                              // Append the text to <li>
+            document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
+        }
+        function myFilterFunction() {
+            var sSearchWord = document.getElementById("myFilterBox").value;
+            console.log(sSearchWord);
+        }
+
+        function myFilterFunction() {
+            var input, filter, ul, li, i, txtValue;
+            input = document.getElementById("myFilterBox");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myList");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].innerHTML;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+    body {
+        background-color: rgb(240, 254, 255);
+    }
+
+* {
+  box-sizing: border-box;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the list items */
+ul li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #e2df0d;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+}
+
+    </style>
+    <h3><b>Address Book</b></h3>
+    <input id="myFilterBox" type="text" onkeyup="myFilterFunction();" placeholder="Filter... ">
+    <input id="myNewName" type="text" placeholder="New... ">
+    <button onclick="addperson();">Add</button>
+
+    
+    <table id="myList"boreder="2" width=100%>
+        <tr>
+            
+            <ol type="1">
+            <td><li><a href = "https://www.google.com/maps/@52.2326099,6.8903065,3a,75y,201.2h,93.55t/data=!3m8!1e1!3m6!1sAF1QipOric38xCufubPnhSDAAmUIGFfN-h7V7ghONI8h!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOric38xCufubPnhSDAAmUIGFfN-h7V7ghONI8h%3Dw203-h100-k-no-pi-0-ya357.7271-ro-0-fo100!7i7680!8i3840">Alex</a><img src="Picjpg.webp" width="200" height="200"></li></td>
+            <td><li><a href = "https://www.google.com/maps/@52.230486,6.906641,3a,60y,90t/data=!3m6!1e1!3m4!1sZA2kAaKCMvUzR1dJFLiBPA!2e0!7i13312!8i6656">Anke</a><img src="Picjpg.webp" width="200" height="200"></li></td>
+            <td><li><a href = "https://www.google.com/maps/@52.2305269,6.9065172,3a,30y,90t/data=!3m6!1e1!3m4!1s-BLTAd3IC5dP-L85dIIpwA!2e0!7i13312!8i6656">Bart</a><img src="Picjpg.webp" width="200" height="200"></li></td>
+            <td><li><a href = "https://www.google.com/maps/@52.2305269,6.9065172,3a,30y,90t/data=!3m6!1e1!3m4!1s-BLTAd3IC5dP-L85dIIpwA!2e0!7i13312!8i6656">Bas</a><img src="Picjpg.webp" width="200" height="200"></li></td></ol>
+        
+</tr>
+<tr>
+            
+        <ol type="5">
+        <td><li>Bernard<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Chelan<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Christian<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+        <td><li>Clemens<img src="Picjpg.webp" width="200" height="200"></li></ol></td>
+    
+</tr>
+<tr>
+            
+        <ul>
+        <td><li>Constant<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Cristopher<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Dhiradj<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+        <td><li>Douglas<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+    
+</tr>
+<tr>
+            
+        <ul>
+        <td><li>Eef<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Eline<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Frans<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+        <td><li>Gerd<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+    
+</tr>
+<tr>
+            
+        <ul>
+        <td><li>Jack<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Jan-Willem<img src="Picjpg.webp" width="200" height="200"></li></td>
+        <td><li>Jeroen<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+        <td><li>Maarten<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+    
+</tr>
+<tr>
+       <ul>
+        <td><li>Maha<img src="women.jpg" width="200" height="200"></li></td>
+        <td><li>Marcella<img src="women.jpg" width="200" height="200"></li></td>
+        <td><li>Martijn<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+        <td><li>Paul<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+    
+</tr>
+<tr>
+        <ul>
+         <td><li>Randalph<img src="Picjpg.webp" width="200" height="200"></li></td>
+         <td><li>Rene<img src="Picjpg.webp" width="200" height="200"></li></td>
+         <td><li>Richard<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+         <td><li>Semere<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+     
+ </tr>
+ <tr>
+        <ul>
+         <td><li>Semhar<img src="women.jpg" width="200" height="200"></li></td>
+         <td><li>Simone<img src="women.jpg" width="200" height="200"></li></td>
+         <td><li>Stas<img src="Picjpg.webp" width="200" height="200"></li></ul></td>
+        </tr>
+</table>
+   
+</body>
+
+</html>
